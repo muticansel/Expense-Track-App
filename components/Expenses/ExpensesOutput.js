@@ -35,6 +35,37 @@ const DUMMY_EXPENSES = [
     amount: 500,
     date: new Date(2021, 5, 12),
   },
+  {
+    id: "e6",
+    title: "Macbook Pro",
+    amount: 1000,
+    date: new Date(2021, 5, 12),
+  },
+  {
+    id: "e7",
+    title: "Adidas Shoes",
+    amount: 110,
+    date: new Date(2021, 5, 12),
+  },
+  {
+    id: "e8",
+    title: "Nike T-Shirt",
+    amount: 15,
+    date: new Date(2021, 5, 12),
+  },
+
+  {
+    id: "e9",
+    title: "Macbook Pro M1",
+    amount: 990,
+    date: new Date(2021, 5, 12),
+  },
+  {
+    id: "e10",
+    title: "Apple Watch",
+    amount: 110,
+    date: new Date(2021, 5, 12),
+  },
 ];
 
 function ExpensesOutput({ expenses, expensesPeriod }) {
