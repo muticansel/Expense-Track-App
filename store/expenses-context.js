@@ -1,7 +1,70 @@
-import { createContext } from "react";
-import { DUMMY_EXPENSES } from "../components/Expenses/ExpensesOutput";
+import { createContext, useReducer } from "react";
 
-const ExpensesContext = createContext({
+const DUMMY_EXPENSES = [
+  {
+    id: "e1",
+    title: "Toilet Paper",
+    amount: 94.12,
+    date: new Date(2021, 6, 1),
+  },
+  {
+    id: "e2",
+    title: "New TV",
+    amount: 799.49,
+    date: new Date(2024, 2, 12),
+  },
+  {
+    id: "e3",
+    title: "Car Insurance",
+    amount: 294.67,
+    date: new Date(2021, 2, 28),
+  },
+  {
+    id: "e4",
+    title: "New Desk (Wooden)",
+    amount: 450,
+    date: new Date(2024, 5, 12),
+  },
+  {
+    id: "e5",
+    title: "New Desk (Glass)",
+    amount: 500,
+    date: new Date(2021, 5, 12),
+  },
+  {
+    id: "e6",
+    title: "Macbook Pro",
+    amount: 1000,
+    date: new Date(2021, 5, 12),
+  },
+  {
+    id: "e7",
+    title: "Adidas Shoes",
+    amount: 110,
+    date: new Date(2021, 5, 12),
+  },
+  {
+    id: "e8",
+    title: "Nike T-Shirt",
+    amount: 15,
+    date: new Date(2021, 5, 12),
+  },
+
+  {
+    id: "e9",
+    title: "Macbook Pro M1",
+    amount: 990,
+    date: new Date(2021, 5, 12),
+  },
+  {
+    id: "e10",
+    title: "Apple Watch",
+    amount: 110,
+    date: new Date(2021, 5, 12),
+  },
+];
+
+export const ExpensesContext = createContext({
   expenses: [],
   addExpense: ({ description, amount, date }) => {},
   deleteExpense: (id) => {},
