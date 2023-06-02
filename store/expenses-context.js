@@ -100,11 +100,11 @@ function ExpensesContextProvider({ children }) {
   }
 
   function deleteExpense(id) {
-    dispatch({ type: "ADD_EXPENSE", payload: id });
+    dispatch({ type: "DELETE_EXPENSE", payload: id });
   }
 
   function updateExpense(id, expenseData) {
-    dispatch({ type: "ADD_EXPENSE", payload: { id, expenseData } });
+    dispatch({ type: "UPDATE_EXPENSE", payload: { id, expenseData } });
   }
 
   const value = {
